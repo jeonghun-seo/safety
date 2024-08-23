@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전기설비공사 위험 감지 시스템</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script>
+        function startStream() {
+            document.getElementById("stream").src = "/video_feed/";
+        }
+
+        function stopStream() {
+            document.getElementById("stream").src = "";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="second"><span>전기설비공사 위험 감지 시스템</span></h1>
+        <div class="img-box">
+            <img id="stream" width="720" height="480">
+        </div>
+        <div class="buttons">
+            <a title="Button fade blue/green" class="button btnFade btnBlueGreen" onclick="startStream()">Start</a>
+            <a title="Button fade blue/green" class="button btnFade btnBlueGreen" onclick="stopStream()">Stop</a>
+        </div>
+    </div>
+
+</body>
+</html>
